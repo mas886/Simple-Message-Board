@@ -1,7 +1,7 @@
 Simple-Message-Board
 ====================
 
-Simple PHP and SQLite and Bootstrap message board with API.
+Simple PHP, SQLite and Bootstrap message board with API.
 
 How to Install:
 ---------------
@@ -13,3 +13,8 @@ How to Install:
 0. Done.
 
 Example: http://redrednose.xyz/SimpleMessageBoard/
+
+API
+---
+
+To use the simple api you have to access ./api.php and it will display the last message on plain text. It can be usefull if you want to use the message board as a simple command sender (the purpose for which was designed) for a third application.
