@@ -8,7 +8,7 @@ How to Install:
 
 0. Install php and SQLite on your webserver.
 0. Place Simple Message Board files on the web folder.
-0. Create a folder called db on the web's root.
+0. Create a directory called db on the web's root.
 0. Run setup.php file the first time to start using the board. (Will setup the db)
 0. Done.
 
