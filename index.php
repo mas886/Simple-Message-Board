@@ -16,15 +16,15 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['message']) && $_REQUEST['name']
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<link rel="shortcut icon" href="/icon.png" />
+<link rel="shortcut icon" href="./icon.png" />
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Message Platform</title>
+    <title>Plataforma del missatge</title>
 
     <!-- Bootstrap -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,36 +38,32 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['message']) && $_REQUEST['name']
     <div class="container">
     <div class="row">
     <div class="col-md-12">
-       <h1>Send your message.</h1>
+       <h1>Simple Message board</h1>
+	<br></br>
         <p>
 
 <?php if ($message_sent) { ?>
-<div class="alert alert-success" role="alert"><strong>Very good!<strong> You sent your message correctly.</div>
+<div class="alert alert-success" role="alert"><strong>Molt bé!<strong> Has enviat el missatge correctament.</div>
 <?php } ?>
 
 
         <form method="post">
         <div class="form-group">
-            <label for="name">Nom</label>
-             <input type="text" class="form-control" id="name" name="name" placeholder="Escriugui el seu nom"
+            <label for="name">Name</label>
+             <input type="text" class="form-control" id="name" name="name" placeholder="Write your name."
         </div>
         <div class="form-group">
-            <label for="message">Missatge</label>
-            <textarea maxlength="119" class="form-control" id="message" name="message" rows="3" placeholder="Escrigui el missatge"></textarea>
+            <label for="message">Message</label>
+            <textarea maxlength="119" class="form-control" id="message" name="message" rows="3" placeholder="Write your message"></textarea>
         </div>
-       <button type="submit" class="btn btn-default">Entra</button>
+       <button type="submit" class="btn btn-default">Send</button>
       </form>
-
-
-
+      
 <br></br>
-
-
-
 
   <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
     <ul id="myTab" class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">Message History</a></li>
+      <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">History</a></li>
       <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">Commands</a></li>
       
     </ul>
@@ -80,7 +76,7 @@ foreach($stmt as $row) {
 ?>
 <div class="media">
   <a class="media-left" href="#">
-    <img src="/icon.png" alt="">
+    <img src="./icon.png" alt="">
   </a>
   <div class="media-body">
     <h4 class="media-heading"><?php echo(htmlspecialchars($row['user'])); ?></h4>
@@ -95,104 +91,97 @@ foreach($stmt as $row) {
         <p> <table class="table table-condensed">
     <thead>
       <tr>
-        <th>Commands</th>
-        
+        <th>Comandes</th>
+        <th>Comandes</th>
       </tr>
     </thead>
     <tbody>
       <tr>
+	<tr class="success">
         <td>/command 1 on</td>
-
+	 <td>/command 1 off</td>
       </tr>
       <tr>
-        <td>/command 1 off</td>
-
+	<tr class="info">
+	<td>/command 2 on</td>
+	<td>/command 2 off</td>
       </tr>
       <tr>
-        <td>/command 2 on</td>
-
+        
       </tr>
-      <tr>
-        <td>/command 2 off</td>
-
-      </tr>
-      <tr>
+ 	<tr>
+	<tr class="active">
         <td>/command 3 on</td>
-
-      </tr>
-      <tr>
         <td>/command 3 off</td>
 
       </tr>
-      <tr>
+	<tr>
+<tr class="success">
         <td>/command 4 on</td>
-
+	<td>/command 4 off</td>
       </tr>
-      <tr>
-        <td>/command 4 off</td>
-
-      </tr>
-      <tr>
+ 	
+	<tr>
+	<tr class="info">
         <td>/command 5 on</td>
-
-      </tr>
-      <tr>
         <td>/command 5 off</td>
 
       </tr>
-      <tr>
+	<tr>
+	<tr class="active">
         <td>/command 6 on</td>
-
-      </tr>
-      <tr>
         <td>/command 6 off</td>
-
-      </tr>
-      <tr>
-        <td>/command garaig on</td>
-
-      </tr>
-      <tr>
-        <td>/command garaig off</td>
-
-      </tr>
-      <tr>
-        <td>/command on</td>
-
-      </tr>
-      <tr>
-        <td>/command off</td>
-
-      </tr>
-      <tr>
-        <td>/command on</td>
         
-      </tr>
-      <tr>
-        <td>/command off</td>
 
       </tr>
-      <tr>
+
+	<tr>
+	<tr class="success">
+ 	<td>/command on</td>
+        <td>/command off</td>
+        
+
+      </tr>
+	<tr>
+	<tr class="info">
         <td>/command on</td>
-
-      </tr>
-      <tr>
         <td>/command off</td>
 
       </tr>
+ 	<tr>
+	<tr class="active">
+        <td>/command on</td>
+        <td>/command off</td>
+
+      </tr>
+	
+        <tr>
+	<tr class="success">
+        <td>/command on</td>
+        <td>/command off</td>
+
+      </tr>
+        
     </tbody>
   </table></p>
       </div>
       
   </div>
-</body>
         </p>
     </div>
   </div>
-</div>   
+</div>
+<br></br>
+  <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Create by Arnau/mas886/redrednose under MIT license, check the code on <a href="https://github.com/mas886/Simple-Message-Board/">GitHub</a></p>
+      </div>
+    </footer>
+  </body>
+       
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-  </body>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    
 </html>
