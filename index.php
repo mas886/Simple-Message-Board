@@ -174,7 +174,7 @@ foreach($stmt as $row) {
 <br></br>
   <footer class="footer">
       <div class="container">
-        <p class="text-muted">Create by Arnau/mas886/redrednose under MIT license, check the code on <a href="https://github.com/mas886/Simple-Message-Board/">GitHub</a></p>
+        <p class="text-muted">Created by Arnau/mas886/redrednose under MIT license, check the code on <a href="https://github.com/mas886/Simple-Message-Board/">GitHub</a></p>
       </div>
     </footer>
   </body>
