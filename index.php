@@ -43,7 +43,7 @@ if (isset($_REQUEST['name']) && isset($_REQUEST['message']) && $_REQUEST['name']
         <p>
 
 <?php if ($message_sent) { ?>
-<div class="alert alert-success" role="alert"><strong>Molt bé!<strong> Has enviat el missatge correctament.</div>
+<div class="alert alert-success" role="alert"><strong>Nice!<strong> You sent the message correctly.</div>
 <?php } ?>
 
 
