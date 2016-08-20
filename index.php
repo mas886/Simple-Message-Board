@@ -91,8 +91,8 @@ foreach($stmt as $row) {
         <p> <table class="table table-condensed">
     <thead>
       <tr>
-        <th>Comandes</th>
-        <th>Comandes</th>
+        <th>Commands</th>
+        <th>Commands</th>
       </tr>
     </thead>
     <tbody>
